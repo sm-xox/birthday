@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 16th Birthday, My Twin 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #3fd0c9, #c8fff4);
+  font-family: 'Poppins', sans-serif;
+  color: #245f5a;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3.2em;
+  text-align: center;
+  margin-top: 50px;
+  color: #00a8a8;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn { to { opacity: 1; } }
+
+.section {
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.letter span {
+  display: block;
+  margin: 14px 0;
+  opacity: 0;
+  font-size: 1.3em;
+  line-height: 1.8;
+  transition: opacity 1s;
+}
+
+.timeline {
+  text-align: left;
+  font-size: 1.15em;
+}
+
+.timeline div {
+  margin: 18px 0;
+  padding-left: 15px;
+  border-left: 4px solid #00c4cc;
+  animation: fadeIn 2s forwards;
+}
+
+.gif {
+  width: 130px;
+  margin: 12px;
+  border-radius: 16px;
+  transition: transform 0.3s;
+}
+.gif:hover { transform: scale(1.15) rotate(4deg); }
+
+.emoji {
+  font-size: 2em;
+  text-align: center;
+  animation: bounce 1.3s infinite;
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.heart {
+  position: absolute;
+  animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-700px); opacity: 0; }
+}
+
+.grass {
+  position: fixed;
+  bottom: 0;
+  width: 6px;
+  background: #3cb371;
+  animation: sway 2s ease-in-out infinite alternate;
+}
+
+@keyframes sway {
+  0% { transform: rotate(-6deg); }
+  100% { transform: rotate(6deg); }
+}
+
+.footer {
+  text-align: center;
+  font-size: 1.2em;
+  margin: 50px 0;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Happy 16th Birthday, My Twin 💖</h1>
+
+<div class="section">
+  <div class="letter">
+    <span>Hey my twin 🌸</span>
+    <span>We’re really 16… how did time do that so softly and so fast? 🥹</span>
+    <span>You’re not just someone I met — you’re someone I grew with 💕</span>
+    <span>Every laugh, every inside joke, every silly GIF… I keep them all 💌</span>
+    <span>You feel like home, even when everything else feels loud 💛</span>
+  </div>
+</div>
+
+<div class="section timeline">
+  <h2>🌷 Our Little Timeline</h2>
+  <div>🌸 <b>Year 9 — Spring</b><br>I met you. Quietly. Gently. I didn’t know you’d become my twin.</div>
+  <div>🌱 <b>Growing seasons</b><br>Shared laughter, shared stress, shared everything in between.</div>
+  <div>🌊 <b>Year 11 — Spring</b><br>Almost here. Older, stronger… but still us.</div>
+  <div>💖 <b>Now</b><br>Two hearts walking side by side into new chapters.</div>
+</div>
+
+<div class="section">
+  <img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" class="gif">
+  <img src="https://media.giphy.com/media/mlvseq9yvZhba/giphy.gif" class="gif">
+  <img src="https://media.giphy.com/media/l0HlSNOxJB956qwfK/giphy.gif" class="gif">
+</div>
+
+<div class="section">
+  <div class="letter">
+    <span>Congratulations! 恭喜你 🎉</span>
+    <span>May your life be soft, kind, and full of colour 🌈</span>
+    <span>I’ll miss you when college starts… more than words allow 🌷</span>
+    <span>But distance won’t change what we are 💞</span>
+    <span>You’re my twin. Always.</span>
+  </div>
+</div>
+
+<p class="emoji">💖🌱🐱🎉🦈🌸💫</p>
+
+<div class="footer">
+  Made with all my love 🫶  
+</div>
+
+<script>
+// Floating hearts
+for (let i = 0; i < 40; i++) {
+  let heart = document.createElement('div');
+  heart.className = 'heart';
+  heart.innerText = '💖';
+  heart.style.left = Math.random() * window.innerWidth + 'px';
+  heart.style.fontSize = (18 + Math.random() * 24) + 'px';
+  heart.style.animationDuration = (4 + Math.random() * 5) + 's';
+  document.body.appendChild(heart);
+}
+
+// Grass
+for (let i = 0; i < 120; i++) {
+  let g = document.createElement('div');
+  g.className = 'grass';
+  g.style.left = i * 8 + 'px';
+  g.style.height = (12 + Math.random() * 20) + 'px';
+  document.body.appendChild(g);
+}
+
+// Letter animation
+document.querySelectorAll('.letter span').forEach((line, i) => {
+  setTimeout(() => line.style.opacity = 1, 900 + i * 900);
+});
+</script>
+
+</body>
+</html>
