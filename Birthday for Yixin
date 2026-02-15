@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Twin, My Sunshine 🌞</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #c8f6ef, #e8fff7);
+  color: #045c5a;
+  text-align: center;
+}
+
+section {
+  padding: 80px 20px;
+}
+
+h1, h2, h3 {
+  color: #048c87;
+}
+
+.card {
+  background: #ffffffdd;
+  border-radius: 30px;
+  padding: 30px;
+  max-width: 650px;
+  margin: 40px auto;
+}
+
+button {
+  background: #7ddbd3;
+  border: none;
+  padding: 14px 22px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+button:hover {
+  background: #5fcfc6;
+}
+
+img {
+  max-width: 280px;
+  border-radius: 25px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Cat trail */
+.trail {
+  position: fixed;
+  pointer-events: none;
+  font-size: 18px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- INTRO -->
+<section>
+<h1>🎂 Happy Birthday My Twin 🎂</h1>
+<p>Scroll slowly… this is a whole journey just for you 💕</p>
+<img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif">
+</section>
+
+<!-- SUNSHINE -->
+<section class="card">
+<h2>🌞 You Are My Sunshine 🌞</h2>
+<p>
+You are my sunshine, my only sunshine ☀️  
+You make me happy when skies are grey 💛  
+Even when life feels heavy, you make it lighter just by existing.
+</p>
+<p>
+No matter where we go, no matter how far,  
+you will always be **my home** 🫂
+</p>
+</section>
+
+<!-- CANTONESE SONG -->
+<section>
+<h2>🎶 I’m Singing This To You (Cantonese) 🎶</h2>
+
+<div class="card">
+<p>
+🎵 你係我生命入面嘅光 ✨  
+陪住我行過黑暗同迷惘 🌙  
+就算世界改變得好快  
+我哋嘅情誼永遠唔會變 💚
+</p>
+
+<p>
+🎵 今日係你嘅生日 🎂  
+我想你知道  
+你值得世界上所有溫柔 🌸  
+我永遠喺你身邊 💕
+</p>
+</div>
+</section>
+
+<!-- JOURNEY -->
+<section class="card">
+<h2>🌱 Our Twin Journey 🌱</h2>
+<p>
+Same birthday 🎂  
+Same chaos 😭  
+Same laughs 😂  
+Same tears 🥹  
+Same heart 💞
+</p>
+
+<p>
+From school corridors  
+to late night talks  
+to different colleges soon…  
+we are still **US** ✨
+</p>
+</section>
+
+<!-- GIFTS -->
+<section>
+<h2>🎁 Virtual Gift Room 🎁</h2>
+
+<button onclick="openGift('g1')">🎁 Gift 1</button>
+<button onclick="openGift('g2')">🎁 Gift 2</button>
+<button onclick="openGift('g3')">🎁 Gift 3</button>
+<button onclick="openGift('g4')">🎁 Gift 4</button>
+
+<div id="g1" class="card hidden">
+<p>You are my soft little cat 🐱💗</p>
+<img src="https://media.giphy.com/media/mlvseq9yvZhba/giphy.gif">
+</div>
+
+<div id="g2" class="card hidden">
+<p>Even angry… still cute 😾</p>
+<img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif">
+</div>
+
+<div id="g3" class="card hidden">
+<p>Baby Shark is cheering for you 🦈🎉</p>
+<img src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif">
+</div>
+
+<div id="g4" class="card hidden">
+<p>A hug that never ends 🫂</p>
+<img src="https://media.giphy.com/media/PHZ7v9tfQu0o0/giphy.gif">
+</div>
+</section>
+
+<!-- OPEN LETTER -->
+<section>
+<button onclick="toggleLetter()">📜 Open My Letter</button>
+
+<div id="letter" class="card hidden">
+<p>
+Dear Twin,  
+<br><br>
+I hope you know how deeply loved you are.  
+You are kind without trying, strong without showing off,  
+and gentle in a world that isn’t always gentle 🌸  
+<br><br>
+I hope you get **grade 9s in everything** 📚✨  
+but more than that, I hope you believe in yourself the way I believe in you 💞  
+<br><br>
+I am so, so proud of you.  
+Always.  
+— Your Twin 💚
+</p>
+</div>
+</section>
+
+<!-- AFFIRMATIONS -->
+<section class="card">
+<h2>⭐ Birthday Wishes ⭐</h2>
+<p>✨ Confidence</p>
+<p>✨ Happiness</p>
+<p>✨ Health</p>
+<p>✨ Peace</p>
+<p>✨ Dreams coming true</p>
+</section>
+
+<!-- END -->
+<section>
+<h2>🐾 Follow the Cat Trail 🐾</h2>
+<p>Move your mouse or finger 😸</p>
+<p>This page will always be here, just like me 💖</p>
+</section>
+
+<script>
+function openGift(id) {
+  document.getElementById(id).classList.toggle("hidden");
+}
+
+function toggleLetter() {
+  document.getElementById("letter").classList.toggle("hidden");
+}
+
+document.addEventListener("mousemove", function(e) {
+  const paw = document.createElement("div");
+  paw.className = "trail";
+  paw.innerText = "🐾";
+  paw.style.left = e.pageX + "px";
+  paw.style.top = e.pageY + "px";
+  document.body.appendChild(paw);
+  setTimeout(() => paw.remove(), 500);
+});
+</script>
+
+</body>
+</html>
