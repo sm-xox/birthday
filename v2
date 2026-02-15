@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Twin 💖</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #c9f7f1, #b8e6d8);
+  color: #045c5a;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 60px 20px;
+}
+
+h1, h2 {
+  color: #048c87;
+}
+
+button {
+  background: #7ddbd3;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+button:hover {
+  background: #5fcfc6;
+}
+
+.card {
+  background: #ffffffcc;
+  border-radius: 25px;
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+.hidden {
+  display: none;
+}
+
+img {
+  max-width: 250px;
+  border-radius: 20px;
+}
+
+/* cat trail */
+.trail {
+  position: fixed;
+  pointer-events: none;
+  font-size: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<section>
+<h1>🎂 Happy 16th Birthday My Twin 🎂</h1>
+<p>You are my sunshine, my only sunshine 🌞</p>
+<img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif">
+</section>
+
+<section class="card">
+<h2>💌 A message just for you</h2>
+<p>
+You are the best twin I’ve ever known 💖  
+I love you so much and I’m going to miss you endlessly when we go to college.  
+No matter where life takes us, you’ll always be my person 🌱
+</p>
+
+<p>
+🎉 廿六歲生日快樂！  
+恭喜你成長得咁叻，我好為你驕傲 💚  
+我永遠支持你，同你一齊行落去 💕
+</p>
+</section>
+
+<section>
+<h2>🎁 Open Your Virtual Gifts</h2>
+
+<button onclick="openGift('gift1')">🎁 Gift 1</button>
+<button onclick="openGift('gift2')">🎁 Gift 2</button>
+<button onclick="openGift('gift3')">🎁 Gift 3</button>
+
+<div id="gift1" class="card hidden">
+<p>You are my cute little cat 🐱</p>
+<img src="https://media.giphy.com/media/mlvseq9yvZhba/giphy.gif">
+</div>
+
+<div id="gift2" class="card hidden">
+<p>Even when you’re angry… you’re adorable 😾💗</p>
+<img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif">
+</div>
+
+<div id="gift3" class="card hidden">
+<p>Baby Shark loves you 🦈💙</p>
+<img src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif">
+</div>
+</section>
+
+<section class="card">
+<h2>🌈 Our Journey</h2>
+<p>
+From matching birthdays to late-night laughs,  
+from school halls to different colleges…  
+no distance will ever break us 💞
+</p>
+
+<p>
+I hope you get grade 9s in everything 📚✨  
+I’m SO proud of you twin 🌟
+</p>
+</section>
+
+<section>
+<button onclick="toggleLetter()">📜 Open My Letter</button>
+
+<div id="letter" class="card hidden">
+<p>
+Dear Twin,  
+Thank you for being my safe place, my best friend, my family.  
+You are gentle, kind, strong, and beautiful inside and out 🌸  
+I love you forever and always 💚  
+— Your Twin 🫂
+</p>
+</div>
+</section>
+
+<section>
+<h2>🐾 Follow the Cat Trail</h2>
+<p>Move your mouse or finger 😸</p>
+</section>
+
+<script>
+function openGift(id) {
+  document.getElementById(id).classList.toggle("hidden");
+}
+
+function toggleLetter() {
+  document.getElementById("letter").classList.toggle("hidden");
+}
+
+document.addEventListener("mousemove", function(e) {
+  const cat = document.createElement("div");
+  cat.className = "trail";
+  cat.innerText = "🐾";
+  cat.style.left = e.pageX + "px";
+  cat.style.top = e.pageY + "px";
+  document.body.appendChild(cat);
+
+  setTimeout(() => {
+    cat.remove();
+  }, 500);
+});
+</script>
+
+</body>
+</html>
